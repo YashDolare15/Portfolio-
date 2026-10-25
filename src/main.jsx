@@ -110,15 +110,45 @@ function Header() {
           {open ? <X /> : <Menu />}
         </button>
 
-        <nav className={open ? 'nav-links open' : 'nav-links'}>
-          <a className={loc.pathname === '/' ? 'active' : ''} href="/#about" onClick={() => setOpen(false)}>About</a>
-          <a href="/#skills" onClick={() => setOpen(false)}>Skills</a>
-          <a href="/#projects" onClick={() => setOpen(false)}>Projects</a>
-          <a href="/#contact" onClick={() => setOpen(false)}>Contact</a>
-          <a className="nav-resume" href={`${import.meta.env.BASE_URL}cv/YashDolare_Resume%20(3).pdf`} download>
-            <Download size={15} /> Resume
-          </a>
-        </nav>
+
+<nav className={open ? 'nav-links open' : 'nav-links'}>
+  <a
+    href={`${import.meta.env.BASE_URL}#about`}
+    onClick={() => setOpen(false)}
+  >
+    About
+  </a>
+
+  <a
+    href={`${import.meta.env.BASE_URL}#skills`}
+    onClick={() => setOpen(false)}
+  >
+    Skills
+  </a>
+
+  <a
+    href={`${import.meta.env.BASE_URL}#projects`}
+    onClick={() => setOpen(false)}
+  >
+    Projects
+  </a>
+
+  <a
+    href={`${import.meta.env.BASE_URL}#contact`}
+    onClick={() => setOpen(false)}
+  >
+    Contact
+  </a>
+
+  <a
+    className="nav-resume"
+    href={`${import.meta.env.BASE_URL}cv/YashDolare_Resume%20(3).pdf`}
+    download
+  >
+    <Download size={15} /> Resume
+  </a>
+</nav>
+
       </div>
     </header>
   )
